@@ -19,7 +19,10 @@ const MovieList = ({ movies }) => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <select value={minRating} onChange={(e) => setMinRating(e.target.value)}>
+      <select
+        value={minRating}
+        onChange={(e) => setMinRating(Number(e.target.value))}
+      >
         <option value={0}>Всі рейтинги</option>
         <option value={5}>5 і вище</option>
         <option value={6}>6 і вище</option>
